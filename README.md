@@ -19,7 +19,7 @@ Therefore, I started this project. I'm actually a bad designer/frontend develope
 
 We tried to use tkinter to develop a GUI first, since it's a python GUI framework but that wasn't a good choice. You can check this [**issue**](https://github.com/nidhaloff/igel/issues/17) for more. That's why, I made some research and decided now to use the **electron** framework. It appears to be a great choice for developing cross platform desktop apps and since it uses html, css and js, so why not right? :D
 
-**Please** consider contributing and further develop this tool, no matter how small the contribution is. Your contribution will help a lot of people/developers allover the world and you will make people's life easier. Hopefully, one day you will say that you helped developing this amazing tool that many people are using ;)
+**Please** consider contributing and further develop this tool, no matter how small the contribution is. Your contribution will help a lot of people/developers allover the world and you will make people's life easier. Hopefully, one day you will say that you helped developing this amazing tool that many people will use in the future ;)
 
 
 
