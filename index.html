@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <label for="fname">Command</label>
+    <input type="text" placeholder="fit" id="cmd"><br><br>
+    <input id="data" type="file"><br><br>
+    <button id="btn" onclick="showDataPath()">show data path</button><br><br>
+
+    <input id="yaml" type="file"><br><br>
+    <button id="btn-yaml" onclick="showYamlPath()">show yaml path</button><br><br>
+  
+    <button onclick="send()">Submit</button><br><br>
+  
+<script src="./js/script.js"></script>
+</body>
+
+
+</html>
