@@ -4,7 +4,7 @@
 
 ## ML made simple
 
-Igel UI is the official app that allows you to easily interacte with igel from a simple UI instead of using the terminal.
+Igel UI is the official app that allows you to easily interacte with [**igel**](https://github.com/nidhaloff/igel) from a simple UI instead of using the terminal.
 
 > **_NOTE:_**  The UI is still under heavy development
 
