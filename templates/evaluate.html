@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Igel UI</title>
-    <img src="./assets/logo.jpg"/>
+    <img src="../assets/logo.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   
-    <div><a href="./index.html">
+    <div><a href="../index.html">
         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
           </svg>
@@ -20,12 +20,17 @@
 </head>
 <body>
     <h1 id="title">Igel UI</h1>
-    <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link" href="train.html">Active</a>
-        <a class="flex-sm-fill text-sm-center nav-link active" href="evaluate.html">Longer nav link</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="predict.html">Link</a>
-    
-      </nav>
-    <div>evaluation</div>
+    <br><!-- 
+    <label>Your evaluation data: </label>
+    <input type="file" id="eval_data_path"><br>
+    <button onclick="evaluate()">Evaluate</button>
+ -->
+ <form>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Enter your dataset: </label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+    <button type="submit" class="btn btn-primary">evaluate</button>
+  </form>
 </body>
 </html>
