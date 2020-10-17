@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <title>Igel UI</title>
     <img src="./assets/logo.jpg"/>
@@ -12,26 +12,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   
-  </head>
-  <body>
-      <h1 id="title">Igel UI</h1>
-
-      <footer>
-      <button type="button" class="btn btn-primary btn-lg">
-        Train a Model
-      </button>
-      <br/>
-      <button type="button" class="btn btn-secondary btn-lg">
-        Evaluate an existing Model
-      </button>
-      <br/>
-      <button type="button" class="btn btn-secondary btn-lg">
-        Predict using an existing model
-      </button>
-      <br/>
-    </footer>
-
+    <div><a href="./index.html">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+    </a></div>
+</head>
+<body>
+    <h1 id="title">Igel UI</h1>
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link" href="train.html">Active</a>
+        <a class="flex-sm-fill text-sm-center nav-link active" href="evaluate.html">Longer nav link</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="predict.html">Link</a>
+    
+      </nav>
+    <div>evaluation</div>
 </body>
-
-
 </html>
