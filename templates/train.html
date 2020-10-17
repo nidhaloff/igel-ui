@@ -25,10 +25,52 @@
 <body>
     <h1 id="title">Igel UI</h1>
     <br>
-    <label>Enter your dataset: </label>
-    <input id="data" type="file"><br>
-    <button id="btn" onclick="showDataPath()">show data path</button><br><br>
+    <label>Enter your dataset: </label><br>
+    <input id="data" placeholder="data.csv" type="file"><br>
+    <br>
+    <label>Test size: </label><br>
+    <input placeholder="0.2" type="number"><br>
+    <br>
+    <label>Shuffle while split: </label>
+    
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">No</label>
+      </div>
+      <br>
 
+      <label>Replace missing values with: </label>
+      <select id="missing-values" name="missing-values">
+        <option value="mean">mean</option>
+        <option value="median">median</option>
+        <option value="drop">drop</option>
+        <option value="most frequent">most frequent</option>
+        <option value="constant">constant</option>
+      </select>
+
+      <br>
+
+      <label>Encoding: </label>
+      <select id="encoding" name="encoding">
+        <option value=""></option>
+        <option value="OneHotEncoding">one hot encoding</option>
+        <option value="LabelEncoding">label encoding</option>
+      </select>
+      
+      <br>
+      <label>Scaling method: </label>
+      <select id="scale" name="scale">
+        <option value=""></option>
+        <option value="Standard">standardization</option>
+        <option value="MinMax">normalization</option>
+      </select>
+
+
+      <br>
     <input id="yaml" type="file"><br><br>
     <button id="btn-yaml" onclick="showYamlPath()">show yaml path</button><br><br>
   
