@@ -17,8 +17,8 @@
       "category": "your.app.category.type"
     }
   },
-  "keywords": [],
-  "author": "Nidhal Baccouri",
+  "keywords": ["igel", "machine learning", "artificial intelligence", "data science"],
+  "author": "Nidhal Baccouri <nidhalbacc@gmail.com>",
   "license": "Apache-2.0",
   "devDependencies": {
     "electron": "^10.1.3",
