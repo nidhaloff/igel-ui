@@ -6,7 +6,6 @@
   "author": "Nidhal Baccouri <nidhalbacc@gmail.com>",
   "license": "Apache-2.0",
   "main": "main.js",
-  "productName": "Igel-UI",
   "copyright": "Copyright © 2020 ${author}",
   "scripts": {
     "start": "electron .",
