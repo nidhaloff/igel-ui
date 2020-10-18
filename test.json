@@ -1,0 +1,26 @@
+{
+    "dataset": {
+        "type": "csv",
+        "split": {
+            "test_size": 0.1,
+            "shuffle": true
+        },
+        "preprocess": {
+            "missing_values": "mean",
+            "encoding": {
+                "type": ""
+            },
+            "scale": {
+                "method": "",
+                "target": ""
+            }
+        }
+    },
+    "model": {
+        "type": "classification",
+        "algorithm": "RandomForest"
+    },
+    "target": [
+        "sick"
+    ]
+}

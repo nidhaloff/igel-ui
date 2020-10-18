@@ -1,0 +1,50 @@
+{
+    "model": "RandomForestClassifier",
+    "arguments": "default",
+    "type": "classification",
+    "algorithm": "RandomForest",
+    "dataset_props": {
+        "type": "csv",
+        "split": {
+            "test_size": 0.1,
+            "shuffle": true
+        },
+        "preprocess": {
+            "missing_values": "mean",
+            "encoding": {
+                "type": ""
+            },
+            "scale": {
+                "method": "",
+                "target": ""
+            }
+        }
+    },
+    "model_props": {
+        "type": "classification",
+        "algorithm": "RandomForest"
+    },
+    "data_path": "/home/nidhal/projects/test-igel/test/train-indians-diabetes.csv",
+    "train_data_shape": [
+        691,
+        8
+    ],
+    "test_data_shape": [
+        77,
+        8
+    ],
+    "train_data_size": 691,
+    "test_data_size": 77,
+    "results_path": "/home/nidhal/projects/electron/igel-ui/model_results",
+    "model_path": "/home/nidhal/projects/electron/igel-ui/model_results/model.sav",
+    "target": [
+        "sick"
+    ],
+    "results_on_test_data": {
+        "accuracy_score": 0.7662337662337663,
+        "f1_score": 0.6086956521739131,
+        "precision_score": 0.6363636363636364,
+        "recall_score": 0.5833333333333334
+    },
+    "hyperparameter_search_results": {}
+}
