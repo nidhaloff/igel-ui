@@ -37,20 +37,20 @@
     <div class="container">
         <div class="row">
             <div class="col">Enter your dataset:</div>
-            <div class="col"><input id="data" placeholder="data.csv" type="file"></div>
+            <div class="col"><input id="train_data_path" type="file"></div>
         </div>
 
         <div class="row">
         <div class="col">Test size: </div>
-        <div class="col"><input placeholder="0.2" type="number"></div>
+        <div class="col"><input id="test_size" placeholder="0.2" type="number"></div>
     </div>
 
     <div class="row">
         <div class="col">Shuffle while split: </div>
         <div class="col">
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Yes</label>
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="shuffle" value="option1">
+            <label class="form-check-label" for="shuffle">Yes</label>
         </div>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
@@ -160,10 +160,10 @@
 
 <br><br>
 <div style="text-align: center;">
-<button onclick="send()" type="button" class="btn btn-primary">Start Training</button>
+<button onclick="getTrainingParams()" type="button" class="btn btn-primary">Start Training</button>
 </div>
     
-    <script>
+ <!--    <script>
         function displayHyperparamOptions() {
             let hyperparamBtn = document.getElementById('hyper-yes');
             let hyperparamDiv = document.getElementById('hyperparam-search');
@@ -174,7 +174,7 @@
                 hyperparamDiv.style.display = "none";
             }
         }
-    </script>
+    </script> -->
     <script src="../js/script.js"></script>
 </body>
 

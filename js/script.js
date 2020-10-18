@@ -1,4 +1,20 @@
 
+function getTrainingParams() {
+    var trainDataPath = document.getElementById('train_data_path').files[0].path;
+    var testSize = document.getElementById('test_size').value;
+    var shuffle = document.getElementById('shuffle').checked;
+    var missingValueOption = document.getElementById('missing-values').value;
+    console.log({
+        trainDataPath,
+        testSize,
+        shuffle,
+        missingValueOption
+    });
+
+
+}
+
+
 function sendToPython(arg) {
     var python = require('python-shell');
     var path = require('path')
@@ -17,20 +33,8 @@ function sendToPython(arg) {
   
   }
 
-var dataPath = "";
-var yamlPath = "";
 
-function showDataPath() {
-    var val = document.getElementById('data').files[0].path;
-     console.log(val);
-     dataPath = val;
-     //sendToPython("hello python");
-}
-function showYamlPath() {
-    var val = document.getElementById('yaml').files[0].path;
-     console.log(val);
-     yamlPath = val;
-}
+
 
 function send() {
     var cmd = document.getElementById('cmd').value;
