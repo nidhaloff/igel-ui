@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igel UI</title>
+    <img src="../assets/logo.jpg" />
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+     -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <div>
+
+        <a href="../index.html">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+            </svg>
+        </a>
+    </div>
+</head>
+
+<body>
+
+    <h1 id="title">Igel UI</h1>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col">Enter your dataset:</div>
+            <div class="col"><input id="train_data_path" type="file"></div>
+        </div>
+
+        <div class="row">
+        <div class="col">Test size: </div>
+        <div class="col"><input id="test_size" placeholder="0.2" type="number"></div>
+    </div>
+
+    <div class="row">
+        <div class="col">Shuffle while split: </div>
+        <div class="col">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="shuffle" value="option1">
+            <label class="form-check-label" for="shuffle">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">No</label>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col">Replace missing values with: </div>
+        <div class="col">
+        <select id="missing-values" name="missing-values">
+            <option value="mean">mean</option>
+            <option value="median">median</option>
+            <option value="drop">drop</option>
+            <option value="most frequent">most frequent</option>
+            <option value="constant">constant</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col">Encoding: </div>
+        <div class="col">
+        <select id="encoding" name="encoding">
+            <option value=""></option>
+            <option value="OneHotEncoding">one hot encoding</option>
+            <option value="LabelEncoding">label encoding</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col">Scaling method: </div>
+        <div class="col">
+        <select id="scale" name="scale">
+            <option value=""></option>
+            <option value="Standard">standardization</option>
+            <option value="MinMax">normalization</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col">Scaling target: </div>
+        <div class="col">
+        <select id="scale-target" name="scale">
+            <option value=""></option>
+            <option value="inputs">inputs</option>
+            <option value="outputs">outputs</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col">Type of the problem you want to solve: </div>
+        <div class="col">
+        <select id="model-type" name="type">
+            <option value="regression">regression</option>
+            <option value="classification">classification</option>
+            <option value="clustering">clustering</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col">Algorithm you want to use:</div>
+            <div class="col">
+        <select id="algorithm" name="algorithm">
+            <option value="NeuralNetwork">neural networks</option>
+            <option value="LinearRegression">linear regression</option>
+            <option value="LogisticRegression">logistic regression</option>
+            <option value="DecisionTree">decision tree</option>
+            <option value="RandomForest">random forest</option>
+            <option value="ExtraTrees">extra trees</option>
+
+            <option value="SVM">support vector machines</option>
+            <option value="NearestNeighbor">nearest neighbor</option>
+            <option value="GradientBoosting">gradient boosting</option>
+            <option value="Adaboost">Adaboost</option>
+            <option value="Perceptron">Perceptron</option>
+            <option value="Ridge">Ridge</option>
+            <option value="Lasso">Lasso</option>
+        </select>
+    </div>
+    </div>
+        <!-- <br>
+      <label>Use hyperparameter search: </label>
+    
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" onclick="displayHyperparamOptions()" type="radio" name="inlineRadioOptions" id="hyper-yes" value="yes">
+          <label class="form-check-label" for="hyper-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" onclick="displayHyperparamOptions()" type="radio" name="inlineRadioOptions" id="hyper-no" value="no">
+          <label class="form-check-label" for="hyper-no">No</label>
+        </div>
+        <br>
+    <div id="hyperparam-search" style="display: none;">
+        <label>Method: </label>
+      <select id="method" name="method">
+        <option value="grid_search">grid search</option>
+        <option value="random_search">random search</option>
+
+        <label>Number of Kfold: </label>
+      <select id="kfold" name="kfold">
+        <option value="NeuralNetwork">neural networks</option>
+        <option value="LinearRegression">linear regression</option>
+    </div> -->
+
+    <div class="row">
+        <div class="col">Target you want to predict: </div>
+        <div class="col">
+        <input type="text" id="target" placeholder="target" />
+    </div>
+    </div>
+</div>
+
+<br><br>
+<div style="text-align: center;">
+<button onclick="getTrainingParams()" type="button" class="btn btn-primary">Start Training</button>
+</div>
+    
+ <!--    <script>
+        function displayHyperparamOptions() {
+            let hyperparamBtn = document.getElementById('hyper-yes');
+            let hyperparamDiv = document.getElementById('hyperparam-search');
+            if (hyperparamBtn.checked) {
+                hyperparamDiv.style.display = "block";
+            }
+            else {
+                hyperparamDiv.style.display = "none";
+            }
+        }
+    </script> -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
